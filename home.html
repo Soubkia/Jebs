@@ -1,0 +1,194 @@
+<style>
+	* {
+			padding: 0;
+			margin: 0;
+	}
+
+	@font-face {
+		font-family: 'default';
+		src: url('Gujarati Sangam MN.ttf') format('truetype');
+	}
+
+	html {
+		background: #F6F6F6;
+		width: 100%;
+		height: 768;
+	}
+
+
+	#Jebs
+	{
+		position: absolute;
+		top: 50;
+		left: calc(50% - 204px);
+		text-align: center;
+		font-family: 'default';
+		font-size: 200px;
+		color: #000000;
+		line-height: 261px;
+	}
+	#Subtitle
+	{
+		position: absolute;
+		top: 243;
+		left: calc(50% - 175px);
+		font-family: 'default';
+		font-size: 36px;
+		color: #4A4A4A;
+		line-height: 47px;
+	}
+
+	p.link
+	{
+		text-align: center;
+	}
+
+	#Menu
+	{
+
+		text-decoration: none;
+		position: absolute;
+		top: 296;
+		left: calc(50% - 92px);
+		font-family: 'default';
+		font-size: 80px;
+		color: #A40D1F;
+		line-height: 104px;
+	}
+
+	#Phone
+	{
+		/* (518) 874-4068: */
+		position: absolute;
+		top: 408;
+		left: calc(50% - 122px);
+		text-align: center;
+		font-family: 'default';
+		font-size: 36px;
+		color: #3C3C3C;
+		line-height: 47px;
+	}
+
+	#Address
+	{
+		position: absolute;
+		top: 468;
+		left: calc(50% - 298px);
+		font-family: 'default';
+		font-size: 36px;
+		color: #4A4A4A;
+		line-height: 47px;
+	}
+
+	#Hours
+	{
+		position: absolute;
+		top: 528;
+		left: calc(50% - 321px);
+		font-family: GujaratiSangamMN;
+		font-size: 36px;
+		color: #4A4A4A;
+		line-height: 47px;
+	}
+
+	#circle 
+	{
+		position: absolute;
+		top: 590px;
+		left: calc(50% - 9px);
+	    width: 18px;
+	    height: 18px;
+	    -webkit-border-radius: 25px;
+	    -moz-border-radius: 25px;
+	    border-radius: 25px; 
+		background: #B8E986;
+	}
+
+	#Open
+	{
+		position: absolute;
+		top: 620px;
+		left: calc(50% - 157px);
+		font-family: GujaratiSangamMN;
+		font-size: 26px;
+		color: #9B9B9B;
+		line-height: 47px;
+		opacity: 0;
+   		transition: opacity .25s ease-in-out;
+   		-moz-transition: opacity .25s ease-in-out;
+   		-webkit-transition: opacity .25s ease-in-out;
+	}
+
+	#Closed
+	{
+		position: absolute;
+		top: 620px;
+		left: calc(50% - 165px);
+		font-family: GujaratiSangamMN;
+		font-size: 26px;
+		color: #9B9B9B;
+		line-height: 47px;
+		opacity: 0;
+   		transition: opacity .25s ease-in-out;
+   		-moz-transition: opacity .25s ease-in-out;
+   		-webkit-transition: opacity .25s ease-in-out;
+	}
+</style>
+	
+<script type="text/javascript">
+// On click have text fade in with descriptions of what the colors mean
+	function test()
+	{
+		if (indicator() == true) {
+			var message = document.getElementById("Open")
+			message.style.opacity = 1;
+		}
+		else {
+			var message = document.getElementById("Closed")
+			message.style.opacity = 1;
+		}
+	}
+
+	function check_time(today)
+	{
+		if (today.getHours() > 16) 
+			return true;
+		else if (today.getHours() == 16)
+			if (today.getMinutes() >=30)
+				return true;
+		else
+			return false;
+	}
+
+	function check_day(today)
+	{
+		if (today.getDay() != 0)
+			return true
+		else 
+			return false
+	}
+
+	function indicator()
+	{
+		var today = new Date();
+		if (check_day(today) == true && check_time(today) == true)
+			return true;
+		else
+			var circle = document.getElementById("circle");
+			circle.style.background = '#A40D1F';
+			return false;
+	}
+	window.onload = indicator;
+</script>
+
+<html>
+	<p id='Jebs'> Jebs </p>
+	<p id='Subtitle'> The best pizza in Troy </p>
+	<p class='link'> <a id='Menu' href='menu.html'> Menu </a> </p>
+	<p id='Phone'> (518) 874-4068 </p>
+	<p id='Address'> 2304 15th St (Hutton), Troy, NY 12180 </p>
+	<p id='Hours'> Tuesday - Sunday | 4:30 P.M. - 12:00 A.M. </p>
+	<div id='circle' onclick='test();' style='cursor: pointer;'></div>
+	<p id='Open'> Jeb's Pizza is currently open </p>
+	<p id='Closed'> Jeb's Pizza is currently Closed </p>
+</html>

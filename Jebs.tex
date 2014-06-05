@@ -1,0 +1,255 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+% moderncv themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{red}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[margin=0.25in]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+% personal data
+\usepackage{fullpage}
+\name{Jebs}{Pizza}
+\title{Troy}                               % optional, remove / comment the line if not wanted
+\address{2304 15th St (Hutton)}{12180 Troy}{NY}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{(518) 874-4068}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+%\email{soubkia@gmail.com}                               % optional, remove / comment the line if not wanted
+\homepage{www.JebsPizza.com}                         % optional, remove / comment the line if not wanted
+%\extrainfo{www.github.com/Soubkia}                 % optional, remove / comment the line if not wanted
+\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Appetizers}
+\cventry{}{with raspberry sauce}{Fried Dough}{4.59}{}{}
+\cventry{0.79}{with cheese}{French Fries}{3.29}{}{}
+\cventry{}{with red sauce mozzarella and pepperoni}{Pizza Fries}{4.99}{}{}
+\cventry{}{}{Bacon Cheese Fries}{5.29}{}{}
+\cventry{6.99}{with Fries}{Chicken Tenders (4)}{5.99}{}{}
+\cventry{}{with marinara or melba}{Mozzarella Sticks (6)}{5.99}{}{}
+\cventry{}{with cheese}{Jalapeno Poppers (6)}{5.79}{}{}
+\cventry{}{}{Spicy Chicken Poppers (6)}{5.99}{}{}
+\cventry{}{}{Garlic Knots (5)}{2.79}{}{}
+
+%\cventry{May 2014}{B.S. Mathematics and Physics}{Rensselaer Polytechnic Institute}{Troy, NY}{\textit{Computer Science minor}}{Concentrations in statistical mechanics and operations research}  % arguments 3 to 6 can be left empty
+%\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+
+%\section{Undergraduate Thesis}
+%\cvitem{Title}{\emph{Edge Coloring on Critical Graphs}}
+%\cvitem{Supervisors}{Mark K. Goldberg}
+%\cvitem{Description}{The paper explores proofs relating to recent improvements on Shannon's edge coloring bound in multigraphs. It focuses on finding general properties for critical multigraphs and provides an interpretation of proofs for three claims regarding them. }
+
+\section{Wings}
+\centerline{Mild, Medium, Hot, Extra Hot, Honey BBQ, Garlic Parm}
+\cventry{}{}{10 Wings}{7.49}{}{}
+\cventry{}{}{20 Wings}{13.99}{}{}
+\cventry{}{}{Single Boneless}{6.49}{}{}
+\cventry{}{}{Double Boneless}{13.29}{}{}
+\centerline{Wings come with celery and blue cheese}
+%\cventry{2014}{Coursework}{Cryptography and Network Security II}{RPI}{}{Studied modern techniques in cryptography with an active adversarial model.}
+
+%\cventry{2013}{Data Geek Intern}{Pintley}{Boston}{}{Performed queries and analysis of Pintley's MySQL database.}%
+
+%\cventry{2012}{Research Assistant}{Rensselaer Polytechnic Institute}{Troy}{}{Worked under a high efficiency LED research group. Helped graduate students with various lab tasks and procedures. Attended group meetings where problems were discussed and resolved.}
+
+%Detailed achievements:%
+%\begin{itemize}%
+%\item Achievement 1;
+%\item Achievement 2, with sub-achievements:
+%  \begin{itemize}%
+%  \item Sub-achievement (a);
+%  \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
+%    \begin{itemize}
+%    \item Sub-sub-achievement i;
+%    \item Sub-sub-achievement ii;
+%    \item Sub-sub-achievement iii;
+%    \end{itemize}
+%  \item Sub-achievement (c);
+%  \end{itemize}
+%\item Achievement 3.
+%\end{itemize}}
+\section{Subs and Wraps}
+\centerline{Italian, Fat Free Italian, Ranch, Blue Cheese, Russian, Mayo}
+\cventry{\emph{5.29 - 6''}}{}{Veggie}{7.29 - 12''}{}{}
+\cventry{\emph{6.99 - 6''}}{}{Turkey}{8.29 - 12''}{}{}
+\cventry{\emph{5.99 - 6''}}{}{Ham}{7.99 - 12''}{}{}
+\cventry{\emph{6.99 - 6''}}{}{Roast Beef}{8.99 - 12''}{}{}
+\cventry{\emph{5.59 - 6''}}{}{Italian Mix}{7.59 - 12''}{}{}
+\cventry{\emph{5.99 - 6''}}{}{Italian Supreme}{7.99 - 12''}{}{}
+\centerline{Add any meat to a sub or wrap}
+\centerline{1.00 for a 6'' | 2.00 for a 12''}
+%\cventry{2014}{\emph{Supervisor:} Mark K. Goldberg}{Undergraduate Thesis}{Troy}{}{The paper explores proofs relating to recent improvements on Shannon's edge coloring bound in multigraphs. It focuses on finding general properties for critical multigraphs and provides an interpretation of proofs for three claims regarding them.}
+
+
+%\cventry{2013}{Physics TA}{Rensselaer Polytechnic Institute}{Troy}{}{Worked with the professor to plan and set up labs and demonstrations for lecture. Held office hours weekly to help students with the material.}
+
+%\cventry{2010--2014}{Rensselaer Polytechnic Institute}{Coursework}{Troy}{}{Data Structures, Algorithms, Graph Theory, Cryptography and Network Security II, Mathematical Statistics, Advanced Calculus, Electromagnetic Theory, Experimental Physics, Operations Research, Probability Theory}
+
+%\cventry{2013--2014}{President}{Ground Zero}{Troy}{}{GZ is a completely student run and funded DIY music venue. Worked with the booking manager and PR to plan and promote shows and events weekly.}
+
+%\section{Languages}
+%\cvitemwithcomment{C++}{Proficient}{I use it nearly every day.}
+%\cvitemwithcomment{Python}{Proficient}{For cryptography and computations.}
+%\cvitemwithcomment{SQL}{Familiar}{It's been awhile but we know eachother.}
+
+\subsection{Hot Subs - 12”}
+\centerline{Add fries to any sub or wrap for 1.00}
+\cventry{}{}{Chicken Parm}{7.99}{}{}
+\cventry{}{}{Meatball Parm}{7.99}{}{}
+\cventry{}{with mozzarella and marinara}{Sausage Pepper Onion}{8.95}{}{}
+\cventry{}{with peppers, onions, and mushrooms}{Philly Sub}{8.99}{}{}
+\centerline{Available Cheeses}
+\centerline{American, Provolone, Mozzarella, Swiss}
+%\cvitemwithcomment{C++, Python, SQL}{Proficient}{Practiced with these doing more involved projects}
+%\cvitemwithcomment{C, HTML, CSS, Javascript}{Familiar}{Have used these for smaller projects}
+
+\section{Pizza}
+\centerline{Add toppings to any pizza}
+\centerline{1.00 for an 8 Cut | 1.50 for a 12 Cut}
+\cventry{}{}{9 Cut Cheese}{8.99}{}{}
+\cventry{}{}{12 Cut Cheese}{10.99}{}{}
+\cventry{}{}{Gluten-free 8''}{10.59}{}{}
+\centerline{Pepperoni, Ham, Bacon, Meatball, Sausage, Green Pepper, Onion, Mushroom, Tomato,}
+\centerline{Black Olive, Broccoli, Jalapeno, Pineapple, Ricotta}
+\subsection{Specialty Pizza}
+\cventry{\emph{11.59 - 8 Cut}}{Add broccoli for 1.00}{Classic White}{13.59 - 12 Cut}{}{}
+\cventry{\emph{14.59 - 8 Cut}}{}{Chicken Bacon Ranch}{16.59 - 12 Cut}{}{}
+\cventry{\emph{14.59 - 8 Cut}}{}{Bacon Tomato Ranch}{16.59 - 12 Cut}{}{}
+\cventry{\emph{14.59 - 8 Cut}}{Blue cheese on pizza or side}{Buffalo Chicken}{16.59 - 12 Cut}{}{}
+\cventry{\emph{14.59 - 8 Cut}}{Salsa, jalapeno, chicken, mexican cheese, mozz, crumbled chips with side of sour cream}{The Cartel}{16.59 - 12 Cut}{}{}
+\cventry{\emph{14.59 - 8 Cut}}{}{BBQ Chicken}{16.59 - 12 Cut}{}{}
+\cventry{\emph{14.59 - 8 Cut}}{Ham, pineapple, bacon}{Maui Madness}{16.59 - 12 Cut}{}{}
+\cventry{\emph{14.59 - 8 Cut}}{}{Sauteed Potatoes and Onion}{16.59 - 12 Cut}{}{}
+\cventry{\emph{14.59 - 8 Cut}}{Marinara, ricotta, mozzarella, and parmesan cheese}{Chicken or Meatball Parm}{16.59 - 12 Cut}{}{}
+\cventry{\emph{14.59 - 8 Cut}}{}{Baked Ziti}{16.59 - 12 Cut}{}{}
+\cventry{\emph{14.59 - 8 Cut}}{Green pepper, onion, mushroom, black olive, broccoli}{Veggie}{16.59 - 12 Cut}{}{}
+\cventry{\emph{14.59 - 8 Cut}}{Sausage, meatball, pepperoni, bacon}{Four Meat Pizza}{16.59 - 12 Cut}{}{}
+\cventry{\emph{14.59 - 8 Cut}}{}{Hot Dogs, French Fries and Nacho Cheese}{16.59 - 12 Cut}{}{}
+\cventry{\emph{15.99 - 8 Cut}}{}{Philly Cheese}{17.99 - 12 Cut}{}{}
+
+\section{Salads}
+\cventry{}{}{Garden}{3.99}{}{}
+\cventry{}{}{Chef}{5.49}{}{}
+\cventry{}{}{Anti Pasta}{6.49}{}{}
+\cventry{}{}{Chicken Tender}{6.49}{}{}
+\cventry{}{}{Buffalo Chicken}{6.79}{}{}
+\section{Calzones}
+\cventry{1.00}{Add a filling}{Mozzarella and ricotta cheese}{6.59}{}{}
+\section{Sunday - Tuesday Dinners}
+\centerline{Includes Garden Salad and Garlic Knots}
+\cventry{9.79}{with meatballs or sausage}{Baked Ziti}{7.79}{}{}
+\cventry{9.99}{with broccoli}{Chicken Alfredo}{8.99}{}{}
+\cventry{}{}{Baked Mac and Cheese}{7.59}{}{}
+\cventry{}{}{Spaghetti with garlic and olive oil}{6.99}{}{}
+\cventry{}{}{Chicken Parm with pasta}{9.79}{}{}
+\section{Drinks}
+\cventry{}{}{Cans}{1.00}{}{}
+\cventry{}{}{2-Liter}{2.50}{}{}
+%\cvitemwithcomment{}{Familiar}{It's been awhile but we know eachother.}
+
+%\section{Computer skills}
+%\cvdoubleitem{Textediting}{Latex, Word, Pages}{Presentation}{Pages, Powerpoint}
+%\cvdoubleitem{Computation}{Maple, PySci, Excel}{Visual}{Pixen, Sketch}
+%\cvdoubleitem{Music}{LSDJ, Ableton, Pulsar}{Operating Systems}{OSX, Linux, Windows}
+%
+%\section{Interests}
+%\cvitem{Retro Electronics}{I modify and repair all sorts of old electronics ranging from Gameboys to Commodore 64s. Its helped get me familiar with using arduinos and the feeling of soldering things I've broken back together.}
+%\cvitem{Cryptography}{I love number theory and the applications it has to cryptography are no exception. The scenerios it tackles and its potential to protect people remind me why I study mathematics.}
+%\cvitem{Music}{I make music on strange devices and play shows as well. My music can be found at ''soundcloud.com/Adil-Soubki''}
+
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+%
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
+%\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
+
+%\section{References}
+%\begin{cvcolumns}
+%  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+%  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+%  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+%\end{cvcolumns}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\clearpage
+%-----       letter       ---------------------------------------------------------
+%% recipient data
+%\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+%\date{January 01, 1984}
+%\opening{Dear Sir or Madam,}
+%\closing{Yours faithfully,}
+%\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+%\makelettertitle
+%
+%%Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+%When I saw the application for your research project posted by Eric Ameres I was incredibly excited to apply. As a graduating senior in Math and Physics I believe my background has something to offer the project.
+%
+%My coursework took me through some of the toughest statistical theory classes in the undergraduate curriculum and my concentrations in both majors are heavily data based. Last summer I even worked as a data intern at a start up using their mySQL database. Not only is data analytics a huge interest of mine but so is expression of it. When I took creative collaborations with Pauline Oliveros my final project was interpreting census data into a piece for the gameboy so that when you listened to the piece you could interpret parts of the information. While my graphical programming has been limited to smaller projects in openframworks I have a strong background in C++ and python. In my spare time I modify and repair all sorts of old electronics ranging from Gameboys to Commodore 64s. It's helped get me familiar with using arduinos. 
+%
+%I look forward to talking with you more about your project. 
+%%Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+%
+%%Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+%
+%%Albert Einstein discovered that $e=mc^2$ in 1905.
+%
+%%\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
+%
+%\makeletterclosing
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
