@@ -69,76 +69,64 @@
 		clear: right;
 	}
 	
-	#hours:before {
+	#hours::before {
+		content: "";
+		margin-right: 8px;
+		margin-bottom: 1px;
 		display: inline-block;
-		background-color: #000;
-	    width: 14px;
-	    height: 14px;
+		background-color: #FFCC00;
+	    width: 10px;
+	    height: 10px;
 	    -webkit-border-radius: 7px;
 	       -moz-border-radius: 7px;
 	            border-radius: 7px; 
 	}
 	
-	.red {
+	#hours.open::before {
+		background-color: #4CD964;
+	}
+	
+	#hours.closed::before {
 		background-color: #FF3B30;
 	}
 	
-	.yellow {
-		background-color: #FFCC00;
-	}
-	
-	.green {
-		background-color: #4CD964;
-	}
 </style>
 	
 <script type="text/javascript">
-// On click have text fade in with descriptions of what the colors mean
-	function test()
-	{
-		if (indicator() == true) {
-			var message = document.getElementById("Open")
-			message.style.opacity = 1;
-		}
-		else {
-			var message = document.getElementById("Closed")
-			message.style.opacity = 1;
+	
+	function updateStatusIndicatorColor() {
+		var statusIndicator = document.getElementById("hours");
+		if ( isJebsOpenNow() ) {
+			statusIndicator.className += " open";
+		} else {
+			statusIndicator.className += "  closed";
 		}
 	}
-
-	function check_time(today)
-	{
-		if (today.getHours() > 16) 
-			return true;
-		else if (today.getHours() == 16)
-			if (today.getMinutes() >=30)
-				return true;
-		else
-			return false;
-	}
-
-	function check_day(today)
-	{
-		if (today.getDay() != 0)
-			return true
-		else 
-			return false
-	}
-
-	function indicator()
-	{
+	
+	function isJebsOpenNow() {
 		var today = new Date();
-		if (check_day(today) == true && check_time(today) == true)
-			return true;
-		else
-			var circle = document.getElementById("circle");
-			circle.style.background = '#A40D1F';
-			return false;
+		return isJebsOpenOnThisDay(today) && isJebsOpenAtThisTimeOfDay(today);
 	}
-	window.onload = indicator;
+	
+	function isJebsOpenOnThisDay(today) {
+		return today.getDay() != 0;
+	}
+	
+	function isJebsOpenAtThisTimeOfDay(today) {
+		if ( today.getHours() > 16 ) {
+			return true;
+		} else if ( today.getHours() == 16 ) {
+			if ( today.getMinutes() >=30 ) {
+				return true;
+			}
+		} else {
+			return false;
+		}
+	}
+	
 </script>
 </head>
-<body>
+<body onload="updateStatusIndicatorColor()">
 	<p id="name">Jeb&#39;s Pizza</p>
 	<p id="tagline">The best pizza in Troy.</p>
 	<div id="data">
