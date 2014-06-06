@@ -1,53 +1,38 @@
 <html>
 <head>
+<link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
 <style>
 	* {
-			padding: 0;
-			margin: 0;
-	}
-
-	@font-face {
-		font-family: 'default';
-		src: url('Gujarati Sangam MN.ttf') format('truetype');
+		padding: 0;
+		margin: 0;
+		border: 0;
 	}
 
 	html {
-		background: #F6F6F6;
+		background: #FDFDFD;
+	}
+	
+	body {
+		font: 18px/29px "Helvetica Neue", Arial, Helvetica, sans-serif;
+		font-weight: 300;
+	}
+
+	#name {
+		margin-top: 128px;
 		width: 100%;
-		height: 768;
-	}
-
-
-	#Jebs
-	{
-		position: absolute;
-		top: 50;
-		left: calc(50% - 204px);
-		text-align: center;
-		font-family: 'default';
-		font-size: 200px;
 		color: #000000;
-		line-height: 261px;
-	}
-	#Subtitle
-	{
-		position: absolute;
-		top: 243;
-		left: calc(50% - 175px);
-		font-family: 'default';
-		font-size: 36px;
-		color: #4A4A4A;
-		line-height: 47px;
-	}
-
-	p.link
-	{
 		text-align: center;
+		font: 92px/128px "Oleo Script", cursive;
+	}
+	
+	#tagline {
+		margin-top: -24px;
+		color: #4A4A4A;
+		text-align: center;
+		font-style: italic;
 	}
 
-	#Menu
-	{
-
+	#menu {
 		text-decoration: none;
 		position: absolute;
 		top: 296;
@@ -57,83 +42,53 @@
 		color: #A40D1F;
 		line-height: 104px;
 	}
-
-	#Phone
-	{
-		/* (518) 874-4068: */
-		position: absolute;
-		top: 408;
-		left: calc(50% - 122px);
-		text-align: center;
-		font-family: 'default';
-		font-size: 36px;
-		color: #3C3C3C;
-		line-height: 47px;
+	
+	#data {
+		width: 300px;
+		margin: auto;
+		margin-top: 64px;
+	}
+	
+	.line {
+		clear: both;
 	}
 
-	#Address
-	{
-		position: absolute;
-		top: 468;
-		left: calc(50% - 298px);
-		font-family: 'default';
-		font-size: 36px;
-		color: #4A4A4A;
-		line-height: 47px;
+	.label {
+		text-align: right;
+		font-weight: 500;
+		width: 100px;
+		float: left;
 	}
-
-	#Hours
-	{
-		position: absolute;
-		top: 528;
-		left: calc(50% - 321px);
-		font-family: GujaratiSangamMN;
-		font-size: 36px;
-		color: #4A4A4A;
-		line-height: 47px;
+	
+	.value {
+		margin-left: 8px;
+		text-align: left;
+		width: 192px;
+		display: block;
+		float: right;
+		clear: right;
 	}
-
-	#circle 
-	{
-		position: absolute;
-		top: 590px;
-		left: calc(50% - 9px);
-	    width: 18px;
-	    height: 18px;
-	    -webkit-border-radius: 25px;
-	    -moz-border-radius: 25px;
-	    border-radius: 25px; 
-		background: #B8E986;
+	
+	#hours:before {
+		display: inline-block;
+		background-color: #000;
+	    width: 14px;
+	    height: 14px;
+	    -webkit-border-radius: 7px;
+	       -moz-border-radius: 7px;
+	            border-radius: 7px; 
 	}
-
-	#Open
-	{
-		position: absolute;
-		top: 620px;
-		left: calc(50% - 157px);
-		font-family: GujaratiSangamMN;
-		font-size: 26px;
-		color: #9B9B9B;
-		line-height: 47px;
-		opacity: 0;
-   		transition: opacity .25s ease-in-out;
-   		-moz-transition: opacity .25s ease-in-out;
-   		-webkit-transition: opacity .25s ease-in-out;
+	
+	.red {
+		background-color: #FF3B30;
 	}
-
-	#Closed
-	{
-		position: absolute;
-		top: 620px;
-		left: calc(50% - 165px);
-		font-family: GujaratiSangamMN;
-		font-size: 26px;
-		color: #9B9B9B;
-		line-height: 47px;
-		opacity: 0;
-   		transition: opacity .25s ease-in-out;
-   		-moz-transition: opacity .25s ease-in-out;
-   		-webkit-transition: opacity .25s ease-in-out;
+	
+	.yellow {
+		background-color: #FFCC00;
+	}
+	
+	.green {
+		background-color: #4CD964;
 	}
 </style>
 	
@@ -184,14 +139,13 @@
 </script>
 </head>
 <body>
-	<p id='Jebs'> Jebs </p>
-	<p id='Subtitle'> The best pizza in Troy </p>
-	<p class='link'> <a id='Menu' href='menu.html'> Menu </a> </p>
-	<p id='Phone'> (518) 874-4068 </p>
-	<p id='Address'> 2304 15th St (Hutton), Troy, NY 12180 </p>
-	<p id='Hours'> Tuesday - Sunday | 4:30 P.M. - 12:00 A.M. </p>
-	<div id='circle' onclick='test();' style='cursor: pointer;'></div>
-	<p id='Open'> Jeb's Pizza is currently open </p>
-	<p id='Closed'> Jeb's Pizza is currently Closed </p>
+	<p id="name">Jeb&#39;s Pizza</p>
+	<p id="tagline">The best pizza in Troy.</p>
+	<div id="data">
+		<div class="line"><div class="label" id="phone">Phone</div><div class="value">(518) 874-4068</div></div>
+		<div class="line"><div class="label" id="hours">Hours</div><div class="value">Tuesday&mdash;Sunday<br />4:30 PM&mdash;Midnight</div></div>
+		<div class="line"><div class="label" id="address">Address</div><div class="value">2304 15th St. (Hutton)<br />Troy, NY 12180</div></div>
+	</div>
+	<!-- <p class='link'><a id='menu' href='menu.html'>Menu</a></p> -->
 </body>
 </html>
