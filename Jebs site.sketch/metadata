@@ -3,26 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>app</key>
-	<string>com.bohemiancoding.sketch</string>
+	<string>com.bohemiancoding.sketch3</string>
 	<key>build</key>
-	<integer>5361</integer>
+	<integer>7799</integer>
 	<key>commit</key>
-	<string>4570185e2c9ded14ebc287c802202c126573b527</string>
+	<string>e645bc992e78ea0d8f54ab21bcdc83987015d34b</string>
 	<key>fonts</key>
 	<array>
-		<string>GujaratiSangamMN</string>
-		<string>GujaratiSangamMN</string>
-		<string>GujaratiSangamMN</string>
-		<string>GujaratiSangamMN</string>
-		<string>GujaratiSangamMN</string>
-		<string>GujaratiSangamMN</string>
-		<string>GujaratiSangamMN</string>
-		<string>GujaratiSangamMN</string>
-		<string>GujaratiSangamMN</string>
+		<string>HelveticaNeue-Light</string>
+		<string>HelveticaNeue-Medium</string>
+		<string>HelveticaNeue-LightItalic</string>
+		<string>OleoScript-Regular</string>
 	</array>
 	<key>length</key>
-	<integer>26024</integer>
+	<integer>255997</integer>
 	<key>version</key>
-	<integer>18</integer>
+	<integer>36</integer>
 </dict>
 </plist>
