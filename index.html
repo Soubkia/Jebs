@@ -37,7 +37,7 @@
 		margin-bottom: -68px;
 		color: #000000;
 		text-align: center;
-		font: 82px/108px "Oleo Script", cursive;
+		font: 32px/68px "Oleo Script", cursive;
 
 		text-decoration: none;
 		color: #A40D1F;
@@ -89,6 +89,10 @@
 	#hours.closed::before {
 		background-color: #FF3B30;
 	}
+
+	#hours.call::before {
+		background-color: #F5D836;
+	}
 	
 	a, a:hover, a:active, a:visited {
 		text-decoration: none;
@@ -105,6 +109,10 @@
 		} else {
 			statusIndicator.className += "  closed";
 		}
+		if ( isitBestToCall() ) {
+			statusIndicator.className += " call";
+		}
+
 	}
 	
 	function isJebsOpenNow() {
@@ -112,6 +120,16 @@
 		return isJebsOpenOnThisDay(today) && isJebsOpenAtThisTimeOfDay(today);
 	}
 	
+	function isitBestToCall() {
+		var today = new Date("October 13, 1975 02:13:00");
+		if ( today.getHours() > 0 && today.getHours() <= 3) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
 	function isJebsOpenOnThisDay(today) {
 		return today.getDay() != 0;
 	}
@@ -133,7 +151,7 @@
 <body onload="updateStatusIndicatorColor()">
 	<p id="name">Jeb&#39;s Pizza</p>
 	<p id="tagline">The best pizza in Troy.</p>
-	<p id="menu"> <a href="jebs.pdf" style="color: #A40D1F;"> Menu </a> </p>
+	<p id="menu"> <a href="jebs.pdf" style="color: #A40D1F;"> Status line goes right here </a> </p>
 	<div id="data">
 		<div class="line"><div class="label" id="phone">Phone</div><div class="value">(518) 874-4068</div></div>
 		<div class="line"><div class="label" id="hours">Hours</div><div class="value">Tuesday&mdash;Sunday<br />4:30 PM&mdash;Midnight</div></div>
